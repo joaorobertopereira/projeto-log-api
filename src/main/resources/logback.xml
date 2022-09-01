@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <contextName>API-CONTATO</contextName>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <contextName>
+                    <fieldName>app</fieldName>
+                </contextName>
+                <timestamp>
+                    <fieldName>data</fieldName>
+                    <timeZone>America/Sao_Paulo</timeZone>
+                </timestamp>
+                <logLevel>
+                    <fieldName>level</fieldName>
+                </logLevel>
+                <mdc/>
+                <arguments>
+                    <includeNonStructuredArguments>false</includeNonStructuredArguments>
+                </arguments>
+                <stackTrace>
+                    <fieldName>stack</fieldName>
+                </stackTrace>
+                <message>
+                    <fieldName>body</fieldName>
+                </message>
+            </providers>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <appender name="SPLUNK" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="br.com.contato.api.logger.Logger" additivity="false">
+        <appender-ref ref="SPLUNK"/>
+    </logger>
+</configuration>
