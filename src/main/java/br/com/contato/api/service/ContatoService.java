@@ -3,7 +3,7 @@ package br.com.contato.api.service;
 import br.com.contato.api.exception.ResourceNotFoundException;
 import br.com.contato.api.model.Contato;
 import br.com.contato.api.repository.ContatoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -12,10 +12,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class ContatoService {
 
-    @Autowired
-    private ContatoRepository repository;
+
+    private final ContatoRepository repository;
 
     public List<Contato> findAllContato() {
         return repository.findAll();
