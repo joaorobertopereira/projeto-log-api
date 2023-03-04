@@ -1,11 +1,9 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:demo
+    url: jdbc:h2:mem:demo;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password: password
-  application:
-    name: API-CONTATO
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
   h2:
@@ -17,3 +15,6 @@ logging:
 
 server:
   port: 8080
+
+app:
+  name: API-CONTATO

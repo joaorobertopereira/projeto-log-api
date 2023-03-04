@@ -1,8 +1,7 @@
 package br.com.contato.api.logger.exception;
 
-import br.com.contato.api.logger.enums.Severity;
 import br.com.contato.api.logger.model.Event;
-import br.com.contato.api.logger.annotation.MaskDataAnnotation;
+import br.com.contato.api.utils.annotation.MaskDataAnnotation;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
