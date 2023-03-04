@@ -1,4 +1,4 @@
-package br.com.contato.api.logger.annotation;
+package br.com.contato.api.utils.annotation;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;

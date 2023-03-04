@@ -15,7 +15,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ContatoService {
 
-
     private final ContatoRepository repository;
 
     public List<Contato> findAllContato() {

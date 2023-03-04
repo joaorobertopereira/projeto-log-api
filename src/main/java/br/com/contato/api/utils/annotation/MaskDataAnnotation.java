@@ -1,4 +1,4 @@
-package br.com.contato.api.logger.annotation;
+package br.com.contato.api.utils.annotation;
 
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.introspect.Annotated;
@@ -18,6 +18,6 @@ public class MaskDataAnnotation extends JacksonAnnotationIntrospector {
     }
 
     public Version version() {
-        return new Version(1,0,0,"RELEASE", "br.com.gft", "lib-log");
+        return new Version(1,0,0,"RELEASE", "br.com.contato.api", "lib-log");
     }
 }

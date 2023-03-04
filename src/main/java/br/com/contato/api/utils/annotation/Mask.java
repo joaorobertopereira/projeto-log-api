@@ -1,4 +1,4 @@
-package br.com.contato.api.logger.annotation;
+package br.com.contato.api.utils.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
